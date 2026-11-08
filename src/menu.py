@@ -1,6 +1,4 @@
-from shopping_list import shopping_list
-
-print(shopping_list)
+from shopping_list import view_stats
 
 
 def show_menu():
@@ -17,8 +15,8 @@ def show_menu():
 choice = input("Choose an option: ")
 if choice == "1":
     print("You chose option 1")
-elif choice == "2":
-    print("You chose option 2")
+if choice == "2":
+    view_stats()
 elif choice == "3":
     is_running = False
 else:

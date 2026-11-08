@@ -1,1 +1,24 @@
-shopping_list = []
+shop_list = [
+    {
+        "name": "apples",
+        "quantity": 3,
+        "price": 0.5,
+    },
+    {
+        "name": "carton of 12 eggs",
+        "quantity": 1,
+        "price": 7.99,
+    },
+]
+
+# Example: game_data.py (Rock Paper Scissors)
+game_stats = {"wins": 0, "losses": 0, "ties": 0}
+
+
+def view_stats():
+    print("\nCurrent Statistics:")
+    print(f"Games Won: {game_stats['wins']}")
+    print(f"Games Lost: {game_stats['losses']}")
+    print(f"Games Tied: {game_stats['ties']}")
+    total = game_stats["wins"] + game_stats["losses"] + game_stats["ties"]
+    print(f"Total Games: {total}")
