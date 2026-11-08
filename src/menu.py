@@ -1,3 +1,8 @@
+from shopping_list import shopping_list
+
+print(shopping_list)
+
+
 def show_menu():
     is_running = True
     while is_running:
