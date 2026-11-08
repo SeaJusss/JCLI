@@ -10,10 +10,8 @@ def show_menu():
     print("3. View List")
     print("4. Exit")
 
-    choice = input("Choose an option: 1-4 ").strip()
 
-
-choice = input("Choose an option: ")
+choice = input("Choose an option: 1-4 ").strip()
 if choice == "1":
     print("You chose option 1")
 elif choice == "2":
