@@ -1,20 +1,4 @@
-shop_list = []
-
-view_cart = (
-    {
-        "name": "apples",
-        "quantity": 3,
-        "price": 0.5,
-    },
-)
-(
-    {
-        "name": "carton of 12 eggs",
-        "quantity": 1,
-        "price": 7.99,
-    },
-)
-
-
-def add_item():
-    pass
+shopping_list = [
+    {"Name": "Apple", "Quantity": 3, "Price": 3.00},
+    {"Name": "Egg", "Quantity": 5, "Price": 6.00},
+]
