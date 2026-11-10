@@ -1,34 +1,36 @@
-import shopping_list
+from shopping_list import add_item, remove_list, view_list, shop_list
 
 
 def show_menu():
-    is_running = True
-    while is_running:
+    while True:
         print("\nMenu:")
-    print("1. Add Item")
-    print("2. Remove Item")
-    print("3. View List")
-    print("4. Exit")
-    input("Choice: ")
+        print("1. Add Item")
+        print("2. Remove Item")
+        print("3. View List")
+        print("4. Exit")
+
+        choice = input("Choose an option 1-4: ").strip()
+
+        if choice == "1":
+            name = input("Item Name: ").strip()
+            try:
+                quantity = int(input("Quantity: "))
+                price = float(input("Price: $"))
+            except ValueError:
+                print("Quantity must be a whole number and price must be a number.")
+                continue
+            add_item(name, quantity, price)
+        elif choice == "2":
+            name = input("Item to remove: ").strip()
+            remove_list(name)
+        elif choice == "3":
+            view_list()
+        elif choice == "4":
+            print("Goodbye")
+            break
+        else:
+            print("Invalid choice. Please try again.")
 
 
-choice = input("Choose an option 1-4 : ").strip()
-
-
-def new_func(choice):
-    if choice == "1":
-        input("Item Name:")
-        input("Quantity:")
-        input("Price:$")
-        add_item(name, quan)
-    elif choice == "2":
-        print("You chose option 3")
-    elif choice == "3":
-        print("You chose option 2")
-    elif choice == "4":
-        is_running = False
-    else:
-        print("Invalid choice. Please try again.")
-
-
-new_func(choice)
+if __name__ == "__main__":
+    show_menu()
